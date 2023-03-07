@@ -1,0 +1,29 @@
+<div class="grid">
+  <form class="container" (ngSubmit)="send()">
+    <div class="input-field col s8">
+      <div>
+        <label for="dish">Select dish to update</label>
+      </div>
+      <select class="browser-default" [(ngModel)]="dish" name="dish" id="dish">
+        <option *ngFor="let dish of dishes" [ngValue]="dish" >{{dish.name}}</option>
+      </select>
+    </div>
+    <div>
+      <label for="dishName">Dish</label>
+      <input [(ngModel)]="model.name" type="text" name="dishName" id="dishName"/>
+    </div>
+    <div>
+      <label for="price">Price</label>
+      <input [(ngModel)]="model.price" type="number" name="price" id="price"/>
+    </div>
+    <div class="input-field col s8">
+      <div>
+        <label for="groupName">Select group</label>
+      </div>
+      <select class="browser-default" [(ngModel)]="model.groupId" name="groupName" id="groupName">
+        <option *ngFor="let group of groups" [ngValue]="group.id">{{group.groupName}}</option>
+      </select>
+    </div>
+    <button type="submit" class="btn">Send</button>
+  </form>
+</div>

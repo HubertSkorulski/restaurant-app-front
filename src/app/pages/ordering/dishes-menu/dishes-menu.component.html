@@ -1,0 +1,7 @@
+ <div class="bordery text-center">
+  <h1>Tu będzie menu</h1>
+  <div *ngFor="let dish of dishes | async">
+    {{dish.name}} - {{dish.price}}
+    <button class="btn-flat" (click)="emitDish(dish)">+</button>
+  </div>
+ </div>

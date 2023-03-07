@@ -1,0 +1,9 @@
+<div class="bordery cart">
+  <h1>Tu będzie koszyk</h1>
+  <div *ngFor="let cartRow of cartSummary ">
+      {{cartRow.dishName}} - {{cartRow.quantity}}
+  </div>
+  <div>
+    {{totalPrice}}
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="border flex">
+    <div class="menu">
+      <app-dishes-menu
+      [dishes]="dishes"
+      (newEvent)="addDishToCart($event)"
+      >
+      </app-dishes-menu>
+    </div>
+
+    <div class="cart">
+      <app-cart
+        [cartSummary]="cartSummary"
+        [totalPrice]="roundedTotalPrice">
+      </app-cart>
+    </div>
+</div>
+

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Cart} from "./models/cart";
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'restaurant-front';
+  appTitle = 'RESTAURANT';
+  hidden: boolean = true;
+
+  setHidden() {
+    this.hidden = !this.hidden;
+  }
+
+
+
 }
+
+

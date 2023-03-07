@@ -1,0 +1,9 @@
+<div class="grid">
+  <form class="container" (ngSubmit)="send()">
+    <div>
+      <input type="text" [(ngModel)]="model.groupName" name="groupName" id="groupName"/>
+      <label for="groupName">Group Name</label>
+    </div>
+    <button type="submit" class="btn">Send</button>
+  </form>
+</div>
